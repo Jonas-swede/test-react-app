@@ -2,10 +2,7 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -13,19 +10,31 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.column{
+  float:left;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-flow: column;
+  min-height: 100vh;
+  
 }
+
+.side{
+  width:20vw;
+}
+
+.center{
+  margin-top: 10px;
+  width:50vw;
+}
+
 
 .App-link {
   color: #61dafb;
+}
+
+.navbar{
+  height: 40px;
+  background-color: darkcyan;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +44,89 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+table{
+  background-color: rgb(38, 0, 255);
+}
+
+table thead{
+  color: white;
+}
+table tbody {
+background-color: white;
+}
+
+.personHeader{
+  display: flex;
+  justify-content: center;
+}
+
+.personHeader span{
+  width:160px;
+  
+}
+
+.personButton{
+  display: flex;
+  box-shadow: 0 0.125rem 0.25rem 0 rgb(0 0 0 / 16%), 0 0.0625rem 0.5rem 0 rgb(0 0 0 / 12%);
+  border: none;
+  margin: 15px;
+  background-color: white;
+  justify-content: center;
+  display: flex;
+  width:500px;
+}
+
+.personDiv{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.personButton span{
+  width: 160px;
+  height:50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.personButton .languages{
+  flex-direction: column;
+}
+
+.personDetails{
+  display: flex;
+}
+
+.sortButton{
+  background-color: white;
+  border:0px;
+}
+
+.details{
+  display:flex;
+}
+
+.details-span{
+  width: 160px;
+  height:50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+table{
+  table-layout: fixed;
+  width:180px;
+}
+td{
+  width:160px;
+
+}
+
+.Error{
+  color: red;
 }

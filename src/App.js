@@ -1,25 +1,37 @@
-import logo from './logo.svg';
+
+import { useState } from 'react';
 import './App.css';
+import { mockCars } from './MockData';
+import PersonList from './components/Persons';
+import CreatePerson from './components/CreatePersons';
+
+
+
 
 function App() {
+  const [mainColumn,setMainColumn] = useState();
   return (
+    <>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='row navbar'>
+        <button className='button' onClick={()=>(setMainColumn(<PersonList/>))}>Show persons</button>
+        
+        <button className='button' onClick={()=>(setMainColumn(<CreatePerson/>))}>Create new person</button>
+      </div>
+      <div className="row">
+        <div className="column side"></div>
+        <div className="column center" id="MainColumn">
+          {mainColumn}
+        </div>
+        <div className="column side"></div>
+      </div>
     </div>
+    </>
+    
   );
+
+  
 }
 
 export default App;
+
